@@ -337,3 +337,72 @@ Mark this project complete when the following are true:
  Output verified in Notion, Docs, Confluence
 
  UI responsive and compliant with UX goals
+
+ Breathing completed.
+
+Here's an idea for incorporating a chat box into the MVP:
+
+---
+
+### Chat Box Concept
+
+**Purpose**:  
+- Provide real-time support and guidance during PRD generation.  
+- Allow users to ask quick questions, make clarifications, or request modifications without leaving the main interface.
+
+**Key Features**:
+- **Interactive Guidance**: Acts as an "AI Coach" that offers suggestions based on the current section (e.g., "Need help with Stakeholders?" or "What metrics are we tracking?").
+- **Dynamic Q&A**: Users can ask questions like “What should be in the non-functional requirements?” and receive structured, bullet-point responses.
+- **Revision Requests**: Offers a way to prompt Gemini to re-generate a specific PRD section or clarify an ambiguous output, making the process conversational and iterative.
+- **Contextual Prompts**: Integrates with the PRD generation engine, using conversation context (the current PRD section, chosen template, etc.) to give tailored advice.
+- **Quick Tips & Reminders**: Provides checklist prompts and final review reminders, ensuring users don’t miss key components.
+
+---
+
+### User Flow Integration
+
+1. **Dashboard/Generation Screen**:
+   - **Chat Box Sidebar/Overlay**: Located on the right side of the screen (or as an expandable modal) alongside the live preview.
+   - **Default Welcome Message**: “Hi there, need any help with your PRD? Ask me anything!”
+  
+2. **During PRD Editing**:
+   - **Context-Sensitive Prompts**: When a user clicks within a PRD section (like "Functional Requirements"), the chat box can automatically suggest related questions or common issues.
+   - **Real-Time Interactions**: User can type questions or commands (e.g., “Rephrase the Objectives section”) and immediately see the update in the main preview.
+
+3. **Before Final Review**:
+   - **Checklist Reminders**: The chat bot can remind users, “Remember to cover metrics in your Evaluation section.”
+   - **Feedback Loop**: Prompts like “Do you feel the PRD covers all stakeholders?” can help refine the document further.
+
+---
+
+### Wireframe Addition
+
+Imagine adding a chat box on the Generation Screen:
+
+```
+--------------------------------------------------------
+|    AI PRD Generation - [Current Template: SaaS]      |
+--------------------------------------------------------
+| [Sidebar: Checklist]   |  [Chat Box]               |
+|  - Section 1: Intro    | --------------------      |
+|  - Section 2: Stakeholders  |  Hi, need any help?   |
+|    (✓/✗)             |  [Type your query...]     |
+|  - Section 3: Requirements  | --------------------      |
+|  ...                 |                           |
+--------------------------------------------------------
+| [Main Panel: Live PRD Preview]                       |
+| ...                                                |
+--------------------------------------------------------
+| [Button: Re-run]    [Button: Export Markdown]        |
+--------------------------------------------------------
+```
+
+**Interaction**:
+- **Chat Box**: Open chat window on the right provides real-time conversation with the user while they edit or review the PRD.
+- **Responsive**: Expands/minimizes as per user need, ensuring it doesn’t obstruct the main content.
+
+---
+
+This chat box idea would make the application more interactive and friendly—helping users quickly navigate complex PRD components while ensuring that the final document is complete and robust.
+
+Let me know if you’d like to dive deeper or adjust any specifics!
